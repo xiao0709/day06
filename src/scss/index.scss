@@ -1,0 +1,63 @@
+@import "common.scss";
+@import "_minix.scss";
+.wrap {
+    width: 100%;
+    height: 100%;
+    @include box_flex;
+    @include direction(column);
+    header {
+        width: 100%;
+    }
+    section {
+        width: 100%;
+        @include flex;
+        overflow-y: auto;
+        margin-top: pxTorem(5px);
+        .box {
+            width: 100%;
+            @include box_flex;
+            @include flexWrap(wrap);
+            dl {
+                width: 20%;
+                @include box_flex;
+                @include direction(column);
+                @include align;
+                margin-bottom: pxTorem(10px);
+            }
+        }
+        .cont {
+            width: 100%;
+            height: pxTorem(80px);
+            @include box_flex;
+            padding: 0 pxTorem(10px);
+            @include sizing;
+            margin-top: pxTorem(15px);
+            dl {
+                @include box_flex;
+                @include align;
+                dd {
+                    width: 30%;
+                    img {
+                        width: 100%;
+                    }
+                }
+                dt {
+                    margin-left: pxTorem(10px);
+                    font-size: pxTorem(14px);
+                    line-height: pxTorem(25px);
+                }
+            }
+        }
+    }
+    footer {
+        width: 100%;
+        height: pxTorem(50px);
+        @include box_flex;
+        dl {
+            @include box_flex;
+            @include direction(column);
+            @include align;
+            @include flex;
+        }
+    }
+}
